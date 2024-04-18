@@ -1,7 +1,6 @@
-import 'package:clase18_4/presentation/Screens/login_screen.dart';
-import 'package:flutter/foundation.dart';
+import 'package:clase18_4/core/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 
 
 void main() {
@@ -13,8 +12,8 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      home: LoginScreen(),
+    return  MaterialApp.router(
+      routerConfig: appRouter,
     );
   }
 }
