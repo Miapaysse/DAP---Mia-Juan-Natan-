@@ -1,3 +1,5 @@
+import 'package:clase18_4/presentation/Screens/home_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -47,8 +49,17 @@ class LoginScreen extends StatelessWidget {
 
                 if ((inputUser == "Ale") && (inputPass == "Anuel2006") ){
                   print("Inicio de sesión exitoso");
-                  context.push('/home');
-      
+                  
+                  //context.push('/home');
+
+                  Navigator.of(context).push(
+                    
+                    MaterialPageRoute<Null>
+                    (
+                      builder: (BuildContext context){
+                        return HomeScreen(inputUser);}
+                        
+                    ));
                 }
                 else{
                   print("Inicio de sesión fallido");
